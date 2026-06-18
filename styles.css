@@ -858,6 +858,7 @@ h3 {
 .site-footer {
   padding: clamp(22px, 3.2vw, 40px) var(--pad);
   color: var(--muted);
+  scroll-margin-top: 76px;
 }
 
 .footer-card {
