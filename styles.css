@@ -196,32 +196,6 @@ h3 {
   background: var(--accent);
 }
 
-.icon-link {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  aspect-ratio: 1;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--muted);
-  transition: border-color 180ms ease-out, color 180ms ease-out, background 180ms ease-out;
-}
-
-.icon-link:hover {
-  border-color: var(--line-strong);
-  color: var(--accent);
-  background: var(--accent-soft);
-}
-
-.icon-link svg {
-  width: 17px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.6;
-  stroke-linecap: square;
-  stroke-linejoin: miter;
-}
-
 .hero {
   position: relative;
   display: grid;
@@ -858,6 +832,7 @@ h3 {
 .site-footer {
   padding: clamp(22px, 3.2vw, 40px) var(--pad);
   color: var(--muted);
+  scroll-margin-top: 76px;
 }
 
 .footer-card {
@@ -1008,10 +983,6 @@ h3 {
 
   .lang-toggle button {
     width: 36px;
-  }
-
-  .icon-link {
-    display: none;
   }
 
   .hero {
