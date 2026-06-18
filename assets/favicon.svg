@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    :root {
+      --bg: #11110f;
+      --mark: #e8b92f;
+      --edge: rgba(245, 245, 240, 0.28);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f2f0e8;
+        --mark: #d39a00;
+        --edge: rgba(20, 20, 18, 0.22);
+      }
+    }
+  </style>
+  <rect width="64" height="64" rx="14" fill="var(--bg)" />
+  <path d="M39 10 23 54" fill="none" stroke="var(--edge)" stroke-width="14" stroke-linecap="square" />
+  <path d="M38 10 22 54" fill="none" stroke="var(--mark)" stroke-width="9" stroke-linecap="square" />
+</svg>
