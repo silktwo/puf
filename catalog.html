@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="/PUF каталог-конструктор продуктових ліній без повних ТТХ і публічних цін." />
+    <title>/PUF | Каталог-конструктор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="catalog">
+    <div class="page-shell">
+      <header class="site-header" data-reveal>
+        <a class="brand" href="index.html" aria-label="/PUF home"><span>/</span>PUF</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+          <a href="index.html#trust" data-i18n="nav.trust">Чому PUF</a>
+          <a href="about.html" data-i18n="nav.about">Про нас</a>
+          <a href="#contact" data-i18n="nav.contact">Контакти</a>
+        </nav>
+        <div class="nav-actions" aria-label="Header actions">
+          <div class="lang-toggle" aria-label="Language">
+            <button type="button" data-lang="uk" aria-pressed="true">UA</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <a class="icon-link" href="#constructor" aria-label="Constructor">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v10l-8 4-8-4V7l8-4z"/><path d="M12 3v18M4 7l8 4 8-4"/></svg>
+          </a>
+          <a class="icon-link" href="#request" aria-label="Request">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg>
+          </a>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="page-hero compact" aria-labelledby="catalog-title">
+          <p class="eyebrow" data-reveal data-i18n="catalog.eyebrow">/ каталог без відкритих ТТХ</p>
+          <h1 id="catalog-title" data-reveal data-scramble data-i18n="catalog.title">Конструктор
+виробів.</h1>
+          <p data-reveal data-i18n="catalog.text">
+            Це не публічний список SKU. Оберіть лінію, раму, сенсор, канал зв'язку та призначення. Після цього команда уточнює конфігурацію й передає каталог або прайс контрольованим каналом.
+          </p>
+        </section>
+
+        <section class="catalog-lines" aria-labelledby="lines-title">
+          <div class="section-kicker" data-reveal>
+            <span>01</span>
+            <p data-i18n="catalog.linesKicker">Лінії</p>
+          </div>
+          <div class="section-heading">
+            <h2 id="lines-title" data-reveal data-i18n="catalog.linesTitle">Лінії за каналом
+і сенсором.</h2>
+            <p data-reveal data-i18n="catalog.linesText">Нижче приклади базових напрямів. Повний набір варіантів відкривається після запиту.</p>
+          </div>
+          <div class="catalog-grid">
+            <button class="catalog-line active" id="line-optic" type="button" data-line="optic" data-reveal>
+              <img src="assets/Drones/pzork-optic.png" alt="" /><span>PZORK</span><strong data-i18n="line.optic">Оптика</strong><small>профіль керування · деталі за запитом</small>
+            </button>
+            <button class="catalog-line" id="line-analog" type="button" data-line="analog" data-reveal>
+              <img src="assets/Drones/pzork-analog.png" alt="" /><span>PZORK</span><strong data-i18n="line.analog">Аналог</strong><small>відеопрофіль · деталі за запитом</small>
+            </button>
+            <button class="catalog-line" id="line-digital" type="button" data-line="digital" data-reveal>
+              <img src="assets/Drones/pzork-digital.png" alt="" /><span>PZORK</span><strong data-i18n="line.digital">Цифра</strong><small>цифровий профіль · деталі за запитом</small>
+            </button>
+            <button class="catalog-line" id="line-thermal" type="button" data-line="thermal" data-reveal>
+              <img src="assets/Drones/pzork-thermal.png" alt="" /><span>PZORK</span><strong data-i18n="line.thermal">Термал</strong><small>сенсорний профіль · деталі за запитом</small>
+            </button>
+            <button class="catalog-line" id="line-interceptor" type="button" data-line="interceptor" data-reveal>
+              <img src="assets/Drones/ban-one-interceptor.png" alt="" /><span>PZORK</span><strong data-i18n="line.interceptor">Перехоплювач</strong><small>окремий профіль · деталі за запитом</small>
+            </button>
+            <button class="catalog-line" id="line-relay" type="button" data-line="relay" data-reveal>
+              <img src="assets/Drones/pzork-repeater.png" alt="" /><span>PZORK</span><strong data-i18n="line.relay">Носій ретранслятора</strong><small>роль зв'язку · деталі за запитом</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="builder-section" id="constructor" aria-labelledby="builder-title">
+          <div class="builder-visual" data-reveal>
+            <span class="scope-label" data-i18n="catalog.activeLine">Активна лінія</span>
+            <strong id="line-title">Оптика</strong>
+            <p id="line-copy">Оптоволоконна лінія керування для сценаріїв, де стабільність каналу критична.</p>
+            <div class="signal-map" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="builder-panel" data-reveal>
+            <p class="eyebrow" data-i18n="catalog.builderKicker">/ конфігурація</p>
+            <h2 id="builder-title" data-i18n="catalog.builderTitle">Зберіть
+базовий запит.</h2>
+            <div class="builder-group">
+              <span data-i18n="builder.frame">Рама</span>
+              <div class="option-row" data-builder-group="frame">
+                <button class="active" type="button">S</button>
+                <button type="button">M</button>
+                <button type="button">L</button>
+              </div>
+            </div>
+            <div class="builder-group">
+              <span data-i18n="builder.sensor">Камера / сенсор</span>
+              <div class="option-row" data-builder-group="sensor">
+                <button class="active" type="button" data-i18n="builder.day">День</button>
+                <button type="button" data-i18n="builder.lowlight">Сутінки</button>
+                <button type="button">Thermal</button>
+                <button type="button">Thermal+</button>
+              </div>
+            </div>
+            <div class="builder-group">
+              <span data-i18n="builder.link">Лінія зв'язку</span>
+              <div class="option-row" data-builder-group="link">
+                <button class="active" type="button" data-i18n="builder.fiber">Оптоволокно</button>
+                <button type="button" data-i18n="builder.analog">Аналог</button>
+                <button type="button" data-i18n="builder.digital">Цифра</button>
+              </div>
+            </div>
+            <div class="builder-group">
+              <span data-i18n="builder.mission">Призначення</span>
+              <div class="option-row" data-builder-group="mission">
+                <button class="active" type="button" data-i18n="builder.recon">Спостереження</button>
+                <button type="button" data-i18n="builder.relay">Ретрансляція</button>
+                <button type="button" data-i18n="builder.special">Спеціальна задача</button>
+              </div>
+            </div>
+            <div class="builder-summary">
+              <span data-i18n="catalog.summaryLabel">Попередній запит</span>
+              <strong id="builder-summary">Оптика · S · День · Оптоволокно · Спостереження</strong>
+            </div>
+            <div class="hero-controls">
+              <a class="button primary" href="#request" data-i18n="cta.price">Отримати прайс</a>
+              <a class="button secondary" href="#request" data-i18n="catalog.requestCatalog">Запросити каталог</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="request-section" id="request" aria-labelledby="request-title">
+          <div>
+            <p class="eyebrow" data-reveal data-i18n="route.eyebrow">/ routing</p>
+            <h2 id="request-title" data-reveal data-i18n="route.title">Один вхід,
+різні маршрути.</h2>
+            <p data-reveal data-i18n="route.text">Перший крок має розвести підтримку, закупівлю та партнерство. Це можна підключити до чат-бота або телефонії.</p>
+          </div>
+          <div class="route-panel" data-reveal>
+            <div class="route-tabs" role="tablist" aria-label="Request type">
+              <button class="active" type="button" data-route="support" data-i18n="route.support">Підтримка</button>
+              <button type="button" data-route="procurement" data-i18n="route.procurement">Закупівля</button>
+              <button type="button" data-route="partnership" data-i18n="route.partnership">Партнерство</button>
+            </div>
+            <div class="route-result" aria-live="polite">
+              <span id="route-label">Підтримка</span>
+              <strong id="route-title">Наявні клієнти та експлуатація</strong>
+              <p id="route-copy">Питання по виробах, ремонту, налаштуванню, документації або польовому використанню.</p>
+              <a id="route-link" href="mailto:support@puf.systems">support@puf.systems</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="contact">
+        <div class="footer-card">
+          <div class="footer-top">
+            <div>
+              <span>/PUF</span>
+              <p data-i18n="footer.tagline">Безпілотні вироби, сенсорні модулі, лінії зв'язку та польова підтримка.</p>
+            </div>
+            <div>
+              <span data-i18n="footer.contactLabel">Контакти</span>
+              <p><a href="tel:+380956509426">+380 95 650 94 26</a><br /><a href="mailto:info@p-u-f.com">info@p-u-f.com</a></p>
+            </div>
+          </div>
+          <a class="footer-logo" href="#top">/PUF</a>
+          <div class="footer-bottom">
+            <a href="about.html" data-i18n="nav.about">Про нас</a>
+            <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+            <span data-i18n="footer.legal">Юридична інформація за запитом</span>
+            <span>© 2026, PUF</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

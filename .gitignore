@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.vercel/
+.env
+.env.*
+
+# Internal/private source materials. Do not deploy public catalog PDFs.
+assets/Catalog/
+
