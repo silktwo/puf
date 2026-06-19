@@ -82,6 +82,12 @@ h2 {
   white-space: pre-line;
 }
 
+p,
+small,
+li {
+  white-space: pre-line;
+}
+
 h1 {
   max-width: 16ch;
   font-size: clamp(2.05rem, 3.65vw, 3.9rem);
@@ -269,6 +275,14 @@ h3 {
   margin-bottom: 14px;
 }
 
+.section-kicker,
+.page-hero .eyebrow,
+.builder-panel .eyebrow,
+.request-section .eyebrow,
+.scope-label {
+  display: none;
+}
+
 .hero-lede,
 .page-hero p,
 .section-heading p,
@@ -377,12 +391,20 @@ h3 {
   font-weight: 700;
 }
 
+.section-kicker,
+.page-hero .eyebrow,
+.builder-panel .eyebrow,
+.request-section .eyebrow,
+.scope-label {
+  display: none !important;
+}
+
 .section-heading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.48fr);
   gap: clamp(22px, 4vw, 62px);
   align-items: end;
-  margin-bottom: clamp(24px, 3.4vw, 44px);
+  margin-bottom: clamp(22px, 3vw, 38px);
 }
 
 .section-heading.split h2 {
@@ -625,7 +647,7 @@ h3 {
 
 .builder-visual strong {
   display: block;
-  margin: 24px 0 14px;
+  margin: 0 0 14px;
   font-size: clamp(1.7rem, 3.2vw, 3.45rem);
   line-height: 0.98;
 }
@@ -772,6 +794,7 @@ h3 {
 
 .route-panel {
   padding: 16px;
+  min-height: 252px;
 }
 
 .route-tabs {
@@ -781,9 +804,15 @@ h3 {
   margin-bottom: 18px;
 }
 
+.route-tabs button {
+  min-width: 108px;
+}
+
 .route-result {
   display: grid;
   gap: 12px;
+  min-height: 172px;
+  align-content: start;
 }
 
 .route-result span {
@@ -860,23 +889,25 @@ h3 {
 
 .footer-card {
   display: grid;
-  min-height: min(calc(100svh - 64px), 720px);
-  padding: clamp(16px, 2.2vw, 30px);
-  border: 1px solid var(--line-strong);
+  grid-template-rows: auto 1fr auto;
+  min-height: min(calc(100svh - 64px), 760px);
+  padding: clamp(18px, 2.6vw, 38px);
+  border: 1px solid var(--line);
   border-radius: 8px;
   background:
-    linear-gradient(180deg, oklch(0.17 0.006 90), oklch(0.13 0.006 90)),
+    radial-gradient(circle at 80% 16%, oklch(0.77 0.14 86 / 0.055), transparent 28%),
+    linear-gradient(180deg, oklch(0.14 0.006 90), oklch(0.105 0.006 90)),
     var(--ink-2);
-  box-shadow: inset 0 0 0 1px oklch(0.91 0.008 95 / 0.035);
+  box-shadow: inset 0 0 0 1px oklch(0.91 0.008 95 / 0.025);
 }
 
 .footer-top {
   display: grid;
-  grid-template-columns: minmax(0, 0.45fr) minmax(280px, 0.55fr);
-  gap: clamp(30px, 10vw, 220px);
+  grid-template-columns: minmax(0, 0.54fr) minmax(260px, 0.46fr);
+  gap: clamp(30px, 14vw, 260px);
   align-self: start;
-  padding-bottom: 22px;
-  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: clamp(18px, 2.4vw, 28px);
+  border-bottom: 1px solid var(--line);
 }
 
 .footer-top span,
@@ -901,14 +932,38 @@ h3 {
 }
 
 .footer-logo {
+  position: relative;
   align-self: end;
   width: 100%;
   color: var(--text);
-  font-size: clamp(4.4rem, 15vw, 14.2rem);
+  font-size: clamp(5.4rem, 18vw, 17.5rem);
   font-weight: 500;
-  line-height: 0.74;
-  letter-spacing: -0.065em;
+  line-height: 0.7;
+  letter-spacing: -0.075em;
   white-space: nowrap;
+  overflow: hidden;
+  transition: color 180ms ease-out, letter-spacing 260ms ease-out;
+}
+
+.footer-logo::after {
+  content: "////////////////////";
+  position: absolute;
+  inset: 0;
+  color: var(--accent);
+  opacity: 0;
+  letter-spacing: -0.14em;
+  transform: translateY(8%);
+  transition: opacity 220ms ease-out, transform 260ms ease-out;
+}
+
+.footer-logo:hover {
+  color: transparent;
+  letter-spacing: -0.11em;
+}
+
+.footer-logo:hover::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .footer-bottom {
@@ -917,7 +972,7 @@ h3 {
   gap: 14px;
   align-items: center;
   padding-top: 12px;
-  border-top: 1px solid var(--line-strong);
+  border-top: 1px solid var(--line);
 }
 
 .footer-bottom a {
