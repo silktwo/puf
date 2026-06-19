@@ -408,6 +408,10 @@ h3 {
   background: oklch(0.15 0.006 90 / 0.42);
 }
 
+.trust-card:not([open]) {
+  min-height: 154px;
+}
+
 .trust-card summary {
   position: relative;
   display: grid;
@@ -444,6 +448,10 @@ h3 {
 
 .trust-card h3 {
   margin: clamp(28px, 4vw, 52px) 0 16px;
+}
+
+.trust-card:not([open]) h3 {
+  margin-bottom: 0;
 }
 
 .trust-card ul {
