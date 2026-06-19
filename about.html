@@ -19,8 +19,8 @@
         <a class="brand" href="index.html" aria-label="/PUF home"><span>/</span>PUF</a>
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
-          <a href="index.html#trust" data-i18n="nav.trust">Чому PUF</a>
-          <a href="about.html" data-i18n="nav.about">Про нас</a>
+          <a href="index.html#trust" data-i18n="nav.trust">Чому ПУФ</a>
+          <a href="about.html#vacancies" data-i18n="nav.about">Вакансії</a>
           <a href="#contact" data-i18n="nav.contact">Контакти</a>
         </nav>
         <div class="nav-actions" aria-label="Header actions">
@@ -33,11 +33,11 @@
 
       <main id="top">
         <section class="page-hero compact" aria-labelledby="about-title">
-          <p class="eyebrow" data-reveal data-i18n="about.eyebrow">/ про нас</p>
-          <h1 id="about-title" data-reveal data-i18n="about.title">Інженерна команда
-польового циклу.</h1>
+          <p class="eyebrow" data-reveal data-i18n="about.eyebrow">/ чому PUF</p>
+          <h1 id="about-title" data-reveal data-i18n="about.title">Працюємо разом
+із тими, хто застосовує.</h1>
           <p data-reveal data-i18n="about.text">
-            /PUF поєднує розробку, виробництво, контроль якості та польовий зворотний зв'язок у короткому циклі.
+            Ми не вдаємо, що знаємо краще за військових. Ми чуємо фідбек, доводимо рішення до серійної якості й залишаємо авторство за тими, хто це запропонував.
           </p>
         </section>
 
@@ -46,20 +46,25 @@
             <span>01</span>
             <h2 id="who-title" data-i18n="about.whoTitle">Хто
 ми</h2>
-            <p data-i18n="about.whoText">Команда, що проєктує безпілотні вироби, сенсорні модулі, лінії зв'язку та супровід для оборонних задач.</p>
+            <p data-i18n="about.whoText">Ми робимо дрони не в ізоляції від тих, хто ними воює. Найкращі рішення цієї війни народжуються там, де техніку застосовують щодня. Ми чуємо фідбек, доводимо ці рішення до серійної якості й залишаємо авторство за тими, хто це запропонував.</p>
           </article>
           <article data-reveal>
             <span>02</span>
             <h2 data-i18n="about.qualityTitle">Підхід
 і якість</h2>
-            <p data-i18n="about.qualityText">Кожна конфігурація проходить через вимоги задачі, збірку, перевірку, документацію та зворотний зв'язок від користувачів.</p>
+            <p data-i18n="about.qualityText">Якість для нас не обіцянка «ідеально з першого разу», а швидкість, з якою ми виправляємо те, що показала реальність. Так виріб стає кращим від ітерації до ітерації.</p>
           </article>
-          <article data-reveal>
+          <article id="vacancies" data-reveal>
             <span>03</span>
-            <h2 data-i18n="about.jobsTitle">Команда
-та вакансії</h2>
-            <p data-i18n="about.jobsText">Розділ уточнюється. Якщо хочете стати частиною команди, залиште резюме й коротко опишіть, де можете бути корисні.</p>
-            <a class="button secondary" href="mailto:info@p-u-f.com" data-i18n="about.jobsCta">Надіслати резюме</a>
+            <h2 data-i18n="about.jobsTitle">Стати частиною
+команди</h2>
+            <p data-i18n="about.jobsText">Ми не завжди маємо відкритий список вакансій, але завжди шукаємо:</p>
+            <ul class="job-list">
+              <li data-i18n="about.jobsCombat">людей з бойовим досвідом, яким цікаво розвиватися в цій сфері</li>
+              <li data-i18n="about.jobsCivil">цивільних інженерів, готових працювати на результат</li>
+            </ul>
+            <p data-i18n="about.jobsOutro">Розкажіть, хто ви і що вмієте.</p>
+            <a class="button secondary" href="mailto:info@p-u-f.com" data-i18n="about.jobsCta">Лишити резюме</a>
           </article>
           <article data-reveal>
             <span>04</span>
@@ -72,9 +77,9 @@
         <section class="request-section" id="request" aria-labelledby="about-route-title">
           <div>
             <p class="eyebrow" data-reveal data-i18n="route.eyebrow">/ routing</p>
-            <h2 id="about-route-title" data-reveal data-i18n="route.title">Один вхід,
-різні маршрути.</h2>
-            <p data-reveal data-i18n="route.text">Перший крок має розвести підтримку, закупівлю та партнерство. Це можна підключити до чат-бота або телефонії.</p>
+            <h2 id="about-route-title" data-reveal data-i18n="route.title">Лишіть контакт,
+відповімо по суті.</h2>
+            <p data-reveal data-i18n="route.text">Запит обробляється швидко й по суті. Передзвонимо або надішлемо специфікацію після короткого уточнення задачі.</p>
           </div>
           <div class="route-panel" data-reveal>
             <div class="route-tabs" role="tablist" aria-label="Request type">
@@ -86,7 +91,7 @@
               <span id="route-label">Підтримка</span>
               <strong id="route-title">Наявні клієнти та експлуатація</strong>
               <p id="route-copy">Питання по виробах, ремонту, налаштуванню, документації або польовому використанню.</p>
-              <a id="route-link" href="mailto:support@puf.systems">support@puf.systems</a>
+              <a id="route-link" href="mailto:info@p-u-f.com">info@p-u-f.com</a>
             </div>
           </div>
         </section>
@@ -106,7 +111,7 @@
           </div>
           <a class="footer-logo" href="#top">/PUF</a>
           <div class="footer-bottom">
-            <a href="about.html" data-i18n="nav.about">Про нас</a>
+            <a href="about.html#vacancies" data-i18n="nav.about">Вакансії</a>
             <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
             <span data-i18n="footer.legal">Юридична інформація за запитом</span>
             <span>© 2026, PUF</span>
