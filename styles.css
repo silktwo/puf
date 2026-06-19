@@ -43,11 +43,8 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, oklch(0.88 0.005 95 / 0.035) 1px, transparent 1px),
-    linear-gradient(0deg, oklch(0.88 0.005 95 / 0.028) 1px, transparent 1px),
     radial-gradient(circle at 82% 8%, oklch(0.77 0.14 86 / 0.07), transparent 28%),
     var(--ink);
-  background-size: 76px 76px, 76px 76px, auto, auto;
 }
 
 a {
@@ -110,10 +107,35 @@ h3 {
 }
 
 .page-shell {
+  position: relative;
+  z-index: 1;
   max-width: var(--max);
   margin: 0 auto;
-  border-inline: 1px solid var(--line);
-  background: oklch(0.12 0.006 90 / 0.9);
+  background: oklch(0.12 0.006 90);
+  overflow: hidden;
+}
+
+body[data-page="catalog"] .page-shell::before,
+body[data-page="about"] .page-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, oklch(0.9 0.006 95 / 0.16) 0 1px, transparent 1.25px);
+  background-size: 13px 13px;
+  opacity: 0.56;
+  mask-image:
+    radial-gradient(circle at 50% 10%, black, transparent 58%),
+    linear-gradient(180deg, black, transparent 94%);
+  mix-blend-mode: screen;
+}
+
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .site-header {
@@ -125,7 +147,6 @@ h3 {
   align-items: center;
   min-height: 64px;
   padding: 0 var(--pad);
-  border-bottom: 1px solid var(--line);
   background: oklch(0.12 0.006 90 / 0.88);
   backdrop-filter: blur(18px);
 }
@@ -156,7 +177,7 @@ h3 {
 .nav-links a,
 .footer-meta a,
 .line-strip a {
-  transition: color 180ms ease-out, border-color 180ms ease-out, background 180ms ease-out;
+  transition: color 180ms ease-out, background 180ms ease-out;
 }
 
 .nav-links a:hover,
@@ -176,16 +197,15 @@ h3 {
   display: flex;
   align-items: center;
   height: 38px;
-  border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
+  background: oklch(0.18 0.006 90 / 0.72);
 }
 
 .lang-toggle button {
   width: 42px;
   height: 100%;
   border: 0;
-  border-right: 1px solid var(--line);
   background: transparent;
   color: var(--muted);
   font-size: 0.74rem;
@@ -211,7 +231,6 @@ h3 {
   align-items: center;
   padding: var(--section-pad-y) var(--pad);
   overflow: hidden;
-  border-bottom: 1px solid var(--line);
 }
 
 .hero::after {
@@ -311,17 +330,16 @@ h3 {
   justify-content: center;
   min-height: 40px;
   padding: 0 14px;
-  border: 1px solid var(--line-strong);
+  border: 0;
   border-radius: 8px;
   font-size: 0.78rem;
   font-weight: 700;
   text-align: center;
-  transition: transform 180ms ease-out, border-color 180ms ease-out, background 180ms ease-out;
+  transition: transform 180ms ease-out, background 180ms ease-out;
 }
 
 .button:hover {
   transform: translateY(-1px);
-  border-color: var(--text);
 }
 
 .button.primary {
@@ -331,7 +349,7 @@ h3 {
 
 .button.secondary {
   color: var(--text);
-  background: oklch(0.91 0.008 95 / 0.06);
+  background: oklch(0.91 0.008 95 / 0.08);
 }
 
 .trust-section,
@@ -341,7 +359,6 @@ h3 {
 .about-grid,
 .page-hero {
   padding: var(--section-pad-y) var(--pad);
-  border-bottom: 1px solid var(--line);
 }
 
 .trust-section,
@@ -356,9 +373,7 @@ h3 {
   padding-block: clamp(24px, 3.4vw, 40px);
   display: grid;
   align-content: center;
-  background:
-    linear-gradient(135deg, oklch(0.91 0.008 95 / 0.045), transparent 46%),
-    var(--ink-2);
+  background: linear-gradient(135deg, oklch(0.91 0.008 95 / 0.035), transparent 46%);
 }
 
 .page-hero h1 {
@@ -381,7 +396,6 @@ h3 {
   place-items: center;
   width: 30px;
   aspect-ratio: 1;
-  border: 1px solid var(--line-strong);
   border-radius: 50%;
 }
 
@@ -418,16 +432,13 @@ h3 {
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: 10px;
 }
 
 .trust-card {
   min-height: 238px;
   padding: clamp(18px, 2.3vw, 26px);
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: oklch(0.15 0.006 90 / 0.42);
+  background: oklch(0.15 0.006 90 / 0.34);
 }
 
 .trust-card:not([open]) {
@@ -487,15 +498,14 @@ h3 {
 
 .trust-card li {
   padding-top: 10px;
-  border-top: 1px solid var(--line);
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.1), transparent) top / 100% 1px no-repeat;
 }
 
 .line-strip,
 .catalog-grid,
 .product-grid {
   display: grid;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: 10px;
 }
 
 .line-strip {
@@ -505,12 +515,10 @@ h3 {
 .line-strip a {
   min-height: 104px;
   padding: 15px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
   color: var(--muted);
   font-size: clamp(0.98rem, 1.2vw, 1.2rem);
   font-weight: 700;
-  background: oklch(0.15 0.006 90 / 0.45);
+  background: oklch(0.15 0.006 90 / 0.34);
 }
 
 .line-strip a:hover {
@@ -527,9 +535,7 @@ h3 {
   grid-template-rows: minmax(150px, 0.78fr) auto auto auto;
   min-height: 390px;
   padding: 12px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: oklch(0.15 0.006 90 / 0.48);
+  background: oklch(0.15 0.006 90 / 0.34);
 }
 
 .product-card img {
@@ -568,6 +574,7 @@ h3 {
 
 .catalog-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .catalog-line {
@@ -576,9 +583,7 @@ h3 {
   min-height: 305px;
   padding: 12px;
   border: 0;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: oklch(0.15 0.006 90 / 0.42);
+  background: oklch(0.15 0.006 90 / 0.34);
   color: var(--text);
   text-align: left;
   cursor: pointer;
@@ -626,14 +631,12 @@ h3 {
   grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
   gap: clamp(22px, 3.4vw, 54px);
   padding: var(--section-pad-y) var(--pad);
-  border-bottom: 1px solid var(--line);
   background: var(--ink-2);
 }
 
 .builder-visual,
 .builder-panel,
 .route-panel {
-  border: 1px solid var(--line);
   border-radius: 8px;
   background:
     linear-gradient(135deg, oklch(0.91 0.008 95 / 0.05), transparent 42%),
@@ -661,7 +664,6 @@ h3 {
   position: relative;
   height: 210px;
   margin-top: clamp(30px, 4.6vw, 52px);
-  border: 1px solid var(--line);
   border-radius: 8px;
   background:
     linear-gradient(90deg, var(--line) 1px, transparent 1px),
@@ -673,8 +675,8 @@ h3 {
 .signal-map::after {
   content: "";
   position: absolute;
-  border: 1px solid var(--accent);
   border-radius: 50%;
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 
 .signal-map::before {
@@ -718,7 +720,7 @@ h3 {
   display: grid;
   gap: 8px;
   padding: 12px 0;
-  border-top: 1px solid var(--line);
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.09), transparent) top / 100% 1px no-repeat;
 }
 
 .builder-group > span,
@@ -739,14 +741,14 @@ h3 {
 .route-tabs button {
   min-height: 34px;
   padding: 0 12px;
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: 8px;
-  background: transparent;
+  background: oklch(0.12 0.006 90 / 0.42);
   color: var(--muted);
   font-size: 0.76rem;
   font-weight: 700;
   cursor: pointer;
-  transition: color 180ms ease-out, background 180ms ease-out, border-color 180ms ease-out;
+  transition: color 180ms ease-out, background 180ms ease-out;
 }
 
 .option-row button:hover,
@@ -754,7 +756,6 @@ h3 {
 .option-row button.active,
 .route-tabs button.active {
   color: var(--ink);
-  border-color: var(--accent);
   background: var(--accent);
 }
 
@@ -763,7 +764,6 @@ h3 {
   gap: 8px;
   margin-top: 16px;
   padding: 14px;
-  border: 1px solid var(--line);
   border-radius: 8px;
   background: oklch(0.12 0.006 90 / 0.5);
 }
@@ -775,7 +775,7 @@ h3 {
 .builder-note {
   margin: 12px 0 0;
   padding-top: 12px;
-  border-top: 1px solid var(--line);
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.09), transparent) top / 100% 1px no-repeat;
   color: var(--muted);
   font-size: 0.86rem;
   line-height: 1.45;
@@ -842,18 +842,14 @@ h3 {
 .about-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
   padding-top: 0;
 }
 
 .about-grid article {
   min-height: 220px;
   padding: clamp(16px, 2vw, 22px);
-  border-top: 1px solid var(--line);
-  border-right: 1px solid var(--line);
-}
-
-.about-grid article:nth-child(even) {
-  border-right: 0;
+  background: oklch(0.15 0.006 90 / 0.34);
 }
 
 .about-grid h2 {
@@ -878,7 +874,7 @@ h3 {
 
 .job-list li {
   padding-top: 8px;
-  border-top: 1px solid var(--line);
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.1), transparent) top / 100% 1px no-repeat;
 }
 
 .site-footer {
@@ -892,13 +888,11 @@ h3 {
   grid-template-rows: auto 1fr auto;
   min-height: min(calc(100svh - 64px), 760px);
   padding: clamp(18px, 2.6vw, 38px);
-  border: 1px solid var(--line);
   border-radius: 8px;
   background:
     radial-gradient(circle at 80% 16%, oklch(0.77 0.14 86 / 0.055), transparent 28%),
     linear-gradient(180deg, oklch(0.14 0.006 90), oklch(0.105 0.006 90)),
     var(--ink-2);
-  box-shadow: inset 0 0 0 1px oklch(0.91 0.008 95 / 0.025);
 }
 
 .footer-top {
@@ -907,7 +901,7 @@ h3 {
   gap: clamp(30px, 14vw, 260px);
   align-self: start;
   padding-bottom: clamp(18px, 2.4vw, 28px);
-  border-bottom: 1px solid var(--line);
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.12), transparent) bottom / 100% 1px no-repeat;
 }
 
 .footer-top span,
@@ -972,7 +966,7 @@ h3 {
   gap: 14px;
   align-items: center;
   padding-top: 12px;
-  border-top: 1px solid var(--line);
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.12), transparent) top / 100% 1px no-repeat;
 }
 
 .footer-bottom a {
