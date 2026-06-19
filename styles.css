@@ -241,8 +241,7 @@ h3 {
   filter: contrast(1.08) brightness(0.82) saturate(0.78);
 }
 
-.hero-copy,
-.hero-status {
+.hero-copy {
   position: relative;
   z-index: 1;
 }
@@ -319,39 +318,6 @@ h3 {
 .button.secondary {
   color: var(--text);
   background: oklch(0.91 0.008 95 / 0.06);
-}
-
-.hero-status {
-  align-self: end;
-  justify-self: end;
-  width: min(100%, 360px);
-  padding: 15px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: oklch(0.12 0.006 90 / 0.72);
-  box-shadow: 0 30px 80px var(--shadow);
-}
-
-.hero-status span,
-.hero-status strong,
-.hero-status small {
-  display: block;
-}
-
-.hero-status span {
-  color: var(--accent);
-  font-size: 0.66rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.hero-status strong {
-  margin: 8px 0 16px;
-  font-size: 0.94rem;
-}
-
-.hero-status small {
-  color: var(--muted);
 }
 
 .trust-section,
@@ -991,11 +957,6 @@ h3 {
     grid-column: 1 / -1;
   }
 
-  .hero-status {
-    justify-self: start;
-    text-align: left;
-  }
-
   .line-strip,
   .catalog-grid,
   .product-grid {
@@ -1043,10 +1004,6 @@ h3 {
   .hero-copy,
   .hero-lede {
     max-width: min(100%, 360px);
-  }
-
-  .hero-status {
-    display: none;
   }
 
   .hero-media::after {
