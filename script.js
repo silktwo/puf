@@ -23,11 +23,11 @@ const translations = {
     "home.proc3": "Готовність до незалежної перевірки. Прозора документація від специфікації до постачання.",
     "home.proc4": "Запит обробляється швидко й по суті.",
     "home.constructorKicker": "Каталог",
-    "home.constructorTitle": "Каталог\nі конфігуратор.",
-    "home.constructorText": "Тут можна обрати або зібрати виріб під себе.\nЗа типом або через конфігуратор.",
+    "home.constructorTitle": "Каталог і конфігуратор.",
+    "home.constructorText": "Тут можна обрати або зібрати виріб під себе. За типом або через конфігуратор.",
     "home.priceKicker": "/ controlled access",
-    "home.priceTitle": "Повні ТТХ і ціну\nнадсилаємо за запитом.",
-    "home.priceText": "Повні ТТХ і ціну надсилаємо за запитом.\nЗалишіть контакт - передзвонимо або надішлемо специфікацію.",
+    "home.priceTitle": "Повні ТТХ і ціну надсилаємо за запитом.",
+    "home.priceText": "Повні ТТХ і ціну надсилаємо за запитом. Залишіть контакт - передзвонимо або надішлемо специфікацію.",
     "line.optic": "Оптика",
     "line.analog": "Аналог",
     "line.digital": "Цифра",
@@ -36,10 +36,10 @@ const translations = {
     "line.relay": "Носій ретранслятора",
     "catalog.eyebrow": "/ каталог",
     "catalog.title": "Каталог\nPUF.",
-    "catalog.text": "Тут можна обрати або зібрати виріб під себе.\nЗа типом або через конфігуратор.",
+    "catalog.text": "Тут можна обрати або зібрати виріб під себе. За типом або через конфігуратор.",
     "catalog.linesKicker": "За типом",
     "catalog.linesTitle": "За типом\nвиробу.",
-    "catalog.linesText": "Повні ТТХ і ціну надсилаємо за запитом\nпісля короткого уточнення задачі.",
+    "catalog.linesText": "Повні ТТХ і ціну надсилаємо за запитом після короткого уточнення задачі.",
     "catalog.opticCopy": "Керування по оптоволокну для умов, де радіоканал глушать. Стійкий, непомітний зв'язок там, де РЕБ робить інше марним.",
     "catalog.analogCopy": "Простий і перевірений канал. Коли потрібна передбачуваність без зайвого.",
     "catalog.digitalCopy": "Якісніша картинка й ширші можливості там, де електромагнітна обстановка це дозволяє.",
@@ -49,7 +49,7 @@ const translations = {
     "catalog.activeLine": "Активна лінія",
     "catalog.builderKicker": "Конфігуратор",
     "catalog.builderTitle": "Зберіть виріб\nпід власні задачі",
-    "catalog.builderNote": "Повні ТТХ і ціну надсилаємо за запитом.\nЗалишіть контакт - передзвонимо або надішлемо специфікацію.",
+    "catalog.builderNote": "Повні ТТХ і ціну надсилаємо за запитом. Залишіть контакт - передзвонимо або надішлемо специфікацію.",
     "catalog.summaryLabel": "Попередній запит",
     "catalog.requestCatalog": "Отримати прайс",
     "builder.frame": "Рама",
@@ -77,10 +77,10 @@ const translations = {
     "about.eyebrow": "/ чому ПУФ",
     "about.title": "Працюємо разом\nіз тими, хто застосовує.",
     "about.text": "Ми робимо дрони не в ізоляції від тих, хто ними воює.\nМи не вдаємо, що знаємо краще за військових. Ми працюємо разом із ними.",
-    "about.whoTitle": "Хто\nми",
-    "about.whoText": "Ми робимо дрони не в ізоляції від тих, хто ними воює.\nНайкращі рішення цієї війни народжуються там, де техніку застосовують щодня. Ми чуємо фідбек, доводимо ці рішення до серійної якості й залишаємо авторство за тими, хто це запропонував.\nМи не вдаємо, що знаємо краще за військових. Ми працюємо разом із ними.",
+    "about.whoTitle": "Хто ми",
+    "about.whoText": "Ми робимо дрони не в ізоляції від тих, хто ними воює. Найкращі рішення цієї війни народжуються там, де техніку застосовують щодня. Ми чуємо фідбек, доводимо ці рішення до серійної якості й залишаємо авторство за тими, хто це запропонував. Ми не вдаємо, що знаємо краще за військових. Ми працюємо разом із ними.",
     "about.qualityTitle": "Підхід\nі якість",
-    "about.qualityText": "Якість для нас не обіцянка «ідеально з першого разу», а швидкість, з якою ми виправляємо те, що показала реальність.\nФідбек із застосування доходить до інженерів, втілюється в наступній версії й іде в серію. Так виріб стає кращим від ітерації до ітерації, не на папері, а в полі.",
+    "about.qualityText": "Якість для нас не обіцянка «ідеально з першого разу», а швидкість, з якою ми виправляємо те, що показала реальність. Фідбек із застосування доходить до інженерів, втілюється в наступній версії й іде в серію. Так виріб стає кращим від ітерації до ітерації, не на папері, а в полі.",
     "about.audienceTitle": "Для застосування\nі закупівлі.",
     "about.audienceText": "Окремі вимоги для тих, хто працює з виробом у полі,\nі тих, хто проводить закупівлю.",
     "about.jobsTitle": "Стати частиною\nкоманди",
@@ -120,10 +120,10 @@ const translations = {
     "home.proc3": "Independent review readiness. Clear documentation from specification to delivery.",
     "home.proc4": "Requests are handled quickly and to the point.",
     "home.constructorKicker": "Catalog",
-    "home.constructorTitle": "Catalog\nand configurator.",
+    "home.constructorTitle": "Catalog and configurator.",
     "home.constructorText": "Choose or assemble a product around your task. By type or through the configurator.",
     "home.priceKicker": "/ controlled access",
-    "home.priceTitle": "Full specs and price\nare shared by request.",
+    "home.priceTitle": "Full specs and price are shared by request.",
     "home.priceText": "Full specs and price are shared by request. Leave a contact, we will call back or send a specification.",
     "line.optic": "Fiber",
     "line.analog": "Analog",
@@ -174,7 +174,7 @@ const translations = {
     "about.eyebrow": "/ why PUF",
     "about.title": "We work with\nthose who use it.",
     "about.text": "We do not pretend to know better than soldiers. We hear feedback, bring solutions to serial quality, and keep authorship with those who proposed them.",
-    "about.whoTitle": "Who\nwe are",
+    "about.whoTitle": "Who we are",
     "about.whoText": "We do not build drones in isolation from the people who use them. The best solutions of this war are born where equipment is used every day. We hear feedback, bring those solutions to serial quality, and keep authorship with those who proposed them.",
     "about.qualityTitle": "Approach\nand quality",
     "about.qualityText": "Quality is not a promise to be perfect on the first try. It is the speed at which we correct what reality shows. Field feedback reaches engineers, becomes the next version, and moves into production. That is how the product improves from iteration to iteration, in the field rather than on paper.",
@@ -348,10 +348,6 @@ function updateLine(line) {
 
   if (title) title.textContent = activeLine[0];
   if (copy) copy.textContent = activeLine[1];
-
-  document.querySelectorAll("[data-line]").forEach((button) => {
-    button.classList.toggle("active", button.dataset.line === line);
-  });
 
   updateBuilderSummary();
 }

@@ -1,16 +1,16 @@
 :root {
   color-scheme: dark;
   --ink: oklch(0.12 0.006 90);
-  --ink-2: oklch(0.15 0.006 90);
-  --panel: oklch(0.18 0.006 90);
+  --ink-2: oklch(0.135 0.006 90);
+  --panel: oklch(0.155 0.006 90);
   --panel-2: oklch(0.23 0.006 90);
   --text: oklch(0.91 0.008 95);
   --muted: oklch(0.68 0.008 95);
   --dim: oklch(0.49 0.008 95);
   --line: oklch(0.36 0.006 90 / 0.42);
   --line-strong: oklch(0.54 0.008 90 / 0.55);
-  --accent: oklch(0.77 0.14 86);
-  --accent-soft: oklch(0.77 0.14 86 / 0.16);
+  --accent: oklch(0.76 0.12 86);
+  --accent-soft: oklch(0.76 0.12 86 / 0.09);
   --shadow: oklch(0.07 0.005 90 / 0.72);
   --font: "Helvetica Neue", "Noto Sans", Arial, sans-serif;
   --pad: clamp(18px, 2.6vw, 36px);
@@ -42,9 +42,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -2;
-  background:
-    radial-gradient(circle at 82% 8%, oklch(0.77 0.14 86 / 0.07), transparent 28%),
-    var(--ink);
+  background: var(--ink);
 }
 
 a {
@@ -82,7 +80,7 @@ h2 {
 p,
 small,
 li {
-  white-space: pre-line;
+  text-wrap: pretty;
 }
 
 h1 {
@@ -122,9 +120,9 @@ body[data-page="about"] .page-shell::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: radial-gradient(circle, oklch(0.9 0.006 95 / 0.16) 0 1px, transparent 1.25px);
-  background-size: 13px 13px;
-  opacity: 0.56;
+  background-image: radial-gradient(circle, oklch(0.9 0.006 95 / 0.11) 0 1px, transparent 1.25px);
+  background-size: 34px 34px;
+  opacity: 0.5;
   mask-image:
     radial-gradient(circle at 50% 10%, black, transparent 58%),
     linear-gradient(180deg, black, transparent 94%);
@@ -219,7 +217,7 @@ main,
 
 .lang-toggle button[aria-pressed="true"] {
   color: var(--ink);
-  background: var(--accent);
+  background: var(--text);
 }
 
 .hero {
@@ -284,7 +282,7 @@ main,
 .eyebrow,
 .section-kicker,
 .scope-label {
-  color: var(--accent);
+  color: var(--muted);
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -313,8 +311,9 @@ main,
 }
 
 .hero-lede {
-  max-width: 48ch;
+  max-width: 62ch;
   margin-top: clamp(14px, 2vw, 24px);
+  white-space: pre-line;
 }
 
 .hero-controls {
@@ -330,12 +329,12 @@ main,
   justify-content: center;
   min-height: 40px;
   padding: 0 14px;
-  border: 0;
+  border: 1px solid oklch(0.91 0.008 95 / 0.28);
   border-radius: 8px;
   font-size: 0.78rem;
   font-weight: 700;
   text-align: center;
-  transition: transform 180ms ease-out, background 180ms ease-out;
+  transition: transform 180ms ease-out, border-color 180ms ease-out, background 180ms ease-out, color 180ms ease-out;
 }
 
 .button:hover {
@@ -344,12 +343,18 @@ main,
 
 .button.primary {
   background: var(--text);
+  border-color: var(--text);
   color: var(--ink);
 }
 
 .button.secondary {
   color: var(--text);
-  background: oklch(0.91 0.008 95 / 0.08);
+  background: transparent;
+}
+
+.button.secondary:hover {
+  border-color: var(--text);
+  background: oklch(0.91 0.008 95 / 0.05);
 }
 
 .trust-section,
@@ -377,10 +382,11 @@ main,
 }
 
 .page-hero h1 {
-  max-width: 16ch;
+  max-width: 24ch;
 }
 
 .page-hero p:not(.eyebrow) {
+  max-width: 78ch;
   margin-top: 18px;
 }
 
@@ -425,7 +431,13 @@ main,
   max-width: 18ch;
 }
 
+#constructor-title,
+#price-title {
+  max-width: 34ch;
+}
+
 .section-heading p {
+  max-width: 56ch;
   margin-bottom: 0;
 }
 
@@ -436,13 +448,13 @@ main,
 }
 
 .trust-card {
-  min-height: 238px;
+  min-height: 0;
   padding: clamp(18px, 2.3vw, 26px);
-  background: oklch(0.15 0.006 90 / 0.34);
+  background: transparent;
 }
 
 .trust-card:not([open]) {
-  min-height: 154px;
+  min-height: 0;
 }
 
 .trust-card summary {
@@ -457,30 +469,40 @@ main,
 }
 
 .trust-card summary::after {
-  content: "+";
+  content: "Розкрити";
   position: absolute;
   right: 0;
-  top: 0;
-  color: var(--accent);
-  font-size: 1.1rem;
-  font-weight: 800;
+  top: 2px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .trust-card[open] summary::after {
-  content: "-";
+  content: "Згорнути";
+}
+
+html[lang="en"] .trust-card summary::after {
+  content: "Open";
+}
+
+html[lang="en"] .trust-card[open] summary::after {
+  content: "Close";
 }
 
 .trust-card span,
 .catalog-line span,
 .about-grid article span {
-  color: var(--accent);
+  display: none;
+  color: var(--muted);
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .trust-card h3 {
-  margin: clamp(28px, 4vw, 52px) 0 16px;
+  margin: 0 84px 16px 0;
 }
 
 .trust-card:not([open]) h3 {
@@ -498,7 +520,7 @@ main,
 
 .trust-card li {
   padding-top: 10px;
-  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.1), transparent) top / 100% 1px no-repeat;
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.06), transparent) top / 100% 1px no-repeat;
 }
 
 .line-strip,
@@ -518,12 +540,12 @@ main,
   color: var(--muted);
   font-size: clamp(0.98rem, 1.2vw, 1.2rem);
   font-weight: 700;
-  background: oklch(0.15 0.006 90 / 0.34);
+  background: transparent;
 }
 
 .line-strip a:hover {
-  color: var(--accent);
-  background: oklch(0.22 0.008 90 / 0.72);
+  color: var(--text);
+  background: oklch(0.91 0.008 95 / 0.035);
 }
 
 .product-grid {
@@ -535,7 +557,7 @@ main,
   grid-template-rows: minmax(150px, 0.78fr) auto auto auto;
   min-height: 390px;
   padding: 12px;
-  background: oklch(0.15 0.006 90 / 0.34);
+  background: transparent;
 }
 
 .product-card img {
@@ -557,7 +579,7 @@ main,
 
 .product-card span {
   margin-top: 14px;
-  color: var(--accent);
+  color: var(--muted);
   text-transform: uppercase;
 }
 
@@ -583,16 +605,15 @@ main,
   min-height: 305px;
   padding: 12px;
   border: 0;
-  background: oklch(0.15 0.006 90 / 0.34);
+  background: transparent;
   color: var(--text);
   text-align: left;
   cursor: pointer;
   transition: background 220ms ease-out, color 220ms ease-out;
 }
 
-.catalog-line:hover,
-.catalog-line.active {
-  background: oklch(0.22 0.008 90 / 0.72);
+.catalog-line:hover {
+  background: oklch(0.91 0.008 95 / 0.035);
 }
 
 .catalog-line strong,
@@ -631,16 +652,14 @@ main,
   grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
   gap: clamp(22px, 3.4vw, 54px);
   padding: var(--section-pad-y) var(--pad);
-  background: var(--ink-2);
+  background: transparent;
 }
 
 .builder-visual,
 .builder-panel,
 .route-panel {
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, oklch(0.91 0.008 95 / 0.05), transparent 42%),
-    var(--panel);
+  background: transparent;
 }
 
 .builder-visual {
@@ -676,7 +695,7 @@ main,
   content: "";
   position: absolute;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px var(--accent);
+  box-shadow: inset 0 0 0 1px oklch(0.91 0.008 95 / 0.22);
 }
 
 .signal-map::before {
@@ -720,7 +739,7 @@ main,
   display: grid;
   gap: 8px;
   padding: 12px 0;
-  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.09), transparent) top / 100% 1px no-repeat;
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.055), transparent) top / 100% 1px no-repeat;
 }
 
 .builder-group > span,
@@ -741,14 +760,14 @@ main,
 .route-tabs button {
   min-height: 34px;
   padding: 0 12px;
-  border: 0;
+  border: 1px solid oklch(0.91 0.008 95 / 0.22);
   border-radius: 8px;
-  background: oklch(0.12 0.006 90 / 0.42);
+  background: transparent;
   color: var(--muted);
   font-size: 0.76rem;
   font-weight: 700;
   cursor: pointer;
-  transition: color 180ms ease-out, background 180ms ease-out;
+  transition: color 180ms ease-out, border-color 180ms ease-out, background 180ms ease-out;
 }
 
 .option-row button:hover,
@@ -756,7 +775,8 @@ main,
 .option-row button.active,
 .route-tabs button.active {
   color: var(--ink);
-  background: var(--accent);
+  border-color: var(--text);
+  background: var(--text);
 }
 
 .builder-summary {
@@ -765,7 +785,7 @@ main,
   margin-top: 16px;
   padding: 14px;
   border-radius: 8px;
-  background: oklch(0.12 0.006 90 / 0.5);
+  background: oklch(0.91 0.008 95 / 0.035);
 }
 
 .builder-summary strong {
@@ -775,7 +795,7 @@ main,
 .builder-note {
   margin: 12px 0 0;
   padding-top: 12px;
-  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.09), transparent) top / 100% 1px no-repeat;
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.055), transparent) top / 100% 1px no-repeat;
   color: var(--muted);
   font-size: 0.86rem;
   line-height: 1.45;
@@ -816,7 +836,8 @@ main,
 }
 
 .route-result span {
-  color: var(--accent);
+  display: none;
+  color: var(--muted);
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -836,7 +857,7 @@ main,
   width: max-content;
   color: var(--text);
   font-weight: 700;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid oklch(0.91 0.008 95 / 0.42);
 }
 
 .about-grid {
@@ -847,15 +868,19 @@ main,
 }
 
 .about-grid article {
-  min-height: 220px;
+  min-height: 0;
   padding: clamp(16px, 2vw, 22px);
-  background: oklch(0.15 0.006 90 / 0.34);
+  background: transparent;
 }
 
 .about-grid h2 {
   margin: clamp(20px, 2.8vw, 36px) 0 12px;
-  max-width: 14ch;
+  max-width: 16ch;
   font-size: clamp(1.34rem, 2.2vw, 2.35rem);
+}
+
+.about-grid p {
+  max-width: 68ch;
 }
 
 .about-grid a:not(.button) {
@@ -874,7 +899,7 @@ main,
 
 .job-list li {
   padding-top: 8px;
-  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.1), transparent) top / 100% 1px no-repeat;
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.06), transparent) top / 100% 1px no-repeat;
 }
 
 .site-footer {
@@ -889,10 +914,7 @@ main,
   min-height: min(calc(100svh - 64px), 760px);
   padding: clamp(18px, 2.6vw, 38px);
   border-radius: 8px;
-  background:
-    radial-gradient(circle at 80% 16%, oklch(0.77 0.14 86 / 0.055), transparent 28%),
-    linear-gradient(180deg, oklch(0.14 0.006 90), oklch(0.105 0.006 90)),
-    var(--ink-2);
+  background: var(--ink);
 }
 
 .footer-top {
@@ -901,7 +923,7 @@ main,
   gap: clamp(30px, 14vw, 260px);
   align-self: start;
   padding-bottom: clamp(18px, 2.4vw, 28px);
-  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.12), transparent) bottom / 100% 1px no-repeat;
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.1), transparent) bottom / 100% 1px no-repeat;
 }
 
 .footer-top span,
@@ -943,7 +965,7 @@ main,
   content: "////////////////////";
   position: absolute;
   inset: 0;
-  color: var(--accent);
+  color: var(--text);
   opacity: 0;
   letter-spacing: -0.14em;
   transform: translateY(8%);
@@ -966,7 +988,7 @@ main,
   gap: 14px;
   align-items: center;
   padding-top: 12px;
-  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.12), transparent) top / 100% 1px no-repeat;
+  background: linear-gradient(90deg, oklch(0.91 0.008 95 / 0.1), transparent) top / 100% 1px no-repeat;
 }
 
 .footer-bottom a {
