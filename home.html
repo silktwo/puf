@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="/PUF розробляє безпілотні вироби, оптику, сенсорні модулі та лінії зв'язку для оборонних задач."
+    />
+    <title>PUF | Persha Universalna Firma</title>
+    <meta name="theme-color" content="#11110f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f2f0e8" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <div class="page-shell">
+      <header class="site-header" data-reveal>
+        <a class="brand-chip" href="home.html" aria-label="PUF home">
+          <img src="assets/puf-logo.svg" alt="PUF" />
+        </a>
+        <nav class="nav-bar" aria-label="Primary navigation">
+          <a class="nav-chip" href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+          <a class="nav-chip" href="about.html" data-i18n="nav.trust">Чому ПУФ</a>
+          <a class="nav-chip" href="about.html#vacancies" data-i18n="nav.about">Вакансії</a>
+          <a class="nav-chip" href="#contact" data-i18n="nav.contact">Контакти</a>
+        </nav>
+        <a class="nav-cta" href="#contact" data-i18n="nav.cta">Зв'язатися</a>
+        <div class="lang-toggle" aria-label="Language">
+          <button type="button" data-lang="uk" aria-pressed="true">UA</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-media" aria-hidden="true">
+            <img src="assets/puf-drone-hero.png" alt="" />
+          </div>
+          <div class="hero-copy">
+            <h1 id="hero-title" data-reveal data-scramble data-i18n="home.heroTitle">Дрони створені,
+разом з військовими</h1>
+            <p class="hero-lede" data-reveal data-i18n="home.heroText">
+              Розробляємо й виробляємо дрони під реальні задачі.
+Кожна наступна версія краща за попередню завдяки вам.
+Допоможіть нам зробити наступні вироби ще кращими.
+            </p>
+            <div class="hero-controls" data-reveal>
+              <a class="button primary" href="catalog.html" data-i18n="cta.catalog">Каталог</a>
+              <a class="button secondary" href="mailto:info@p-u-f.com" data-i18n="cta.feedback">Залишити фідбек</a>
+            </div>
+          </div>
+          <a class="hero-card" href="catalog.html#line-optic" data-reveal>
+            <div class="hero-card-body">
+              <span class="hero-card-label" data-i18n="home.cardLabel">Оптоволоконна лінія</span>
+              <p data-i18n="home.cardText">Керування по оптоволокну для умов, де радіоканал глушать.</p>
+            </div>
+            <img src="assets/Drones/pzork-optic.png" alt="" />
+          </a>
+        </section>
+
+        <section class="trust-section" id="trust" aria-labelledby="trust-title">
+          <div class="section-kicker" data-reveal>
+            <span>01</span>
+            <p data-i18n="home.trustKicker">Чому ПУФ</p>
+          </div>
+          <div class="section-heading split">
+            <h2 id="trust-title" data-reveal data-i18n="home.trustTitle">Працюємо разом
+із військовими.</h2>
+            <p data-reveal data-i18n="home.trustText">
+              Ми робимо дрони не в ізоляції від тих, хто ними воює.
+Ми не вдаємо, що знаємо краще за військових. Ми працюємо разом із ними.
+            </p>
+          </div>
+          <div class="trust-grid">
+            <details class="trust-card" data-reveal open>
+              <summary>
+                <span>Military</span>
+                <h3 data-i18n="home.militaryTitle">Тим, хто застосовує</h3>
+              </summary>
+              <ul>
+                <li data-i18n="home.military1">Надійність у бою. Конструкція, розрахована на реальні умови, а не лише польові випробування.</li>
+                <li data-i18n="home.military2">Ремонтопридатність. Відновлення там, де техніка вийшла з ладу, без повернення на завод.</li>
+                <li data-i18n="home.military3">Бойовий досвід застосування. Рішення підтверджені полем бою.</li>
+              </ul>
+            </details>
+            <details class="trust-card" data-reveal open>
+              <summary>
+                <span>Procurement</span>
+                <h3 data-i18n="home.procTitle">Тим, хто закуповує</h3>
+              </summary>
+              <ul>
+                <li data-i18n="home.proc1">Кодифікація. Готовність до постановки на облік і закупівельних процедур.</li>
+                <li data-i18n="home.proc2">Відповідність вимогам. Без сюрпризів на етапі контракту.</li>
+                <li data-i18n="home.proc3">Готовність до незалежної перевірки. Прозора документація від специфікації до постачання.</li>
+                <li data-i18n="home.proc4">Запит обробляється швидко й по суті.</li>
+              </ul>
+            </details>
+          </div>
+        </section>
+
+        <section class="constructor-preview product-showcase" aria-labelledby="constructor-title">
+          <div class="section-kicker" data-reveal>
+            <span>02</span>
+            <p data-i18n="home.constructorKicker">Каталог</p>
+          </div>
+          <div class="section-heading">
+            <h2 id="constructor-title" data-reveal data-i18n="home.constructorTitle">Каталог і конфігуратор.</h2>
+            <p data-reveal data-i18n="home.constructorText">
+              Тут можна обрати або зібрати виріб під себе. За типом або через конфігуратор.
+            </p>
+          </div>
+          <div class="product-grid" data-reveal>
+            <a class="product-card" href="catalog.html#line-optic">
+              <img src="assets/Drones/pzork-optic.png" alt="" />
+              <span>PZORK · OPTIC</span>
+              <strong>Оптоволоконна лінія</strong>
+              <small>Керування по оптоволокну для умов, де радіоканал глушать.</small>
+            </a>
+            <a class="product-card" href="catalog.html#line-digital">
+              <img src="assets/Drones/pzork-digital.png" alt="" />
+              <span>PZORK · DIGITAL</span>
+              <strong>Цифра</strong>
+              <small>Якісніша картинка й ширші можливості, де електромагнітна обстановка дозволяє.</small>
+            </a>
+            <a class="product-card" href="catalog.html#line-relay">
+              <img src="assets/Drones/pzork-repeater.png" alt="" />
+              <span>PZORK · REPEATER</span>
+              <strong>Носій ретранслятора</strong>
+              <small>Подовжує зону там, де зв'язок не дотягується.</small>
+            </a>
+          </div>
+        </section>
+
+        <section class="request-section" id="price" aria-labelledby="price-title">
+          <div>
+            <p class="eyebrow" data-reveal data-i18n="home.priceKicker">/ controlled access</p>
+            <h2 id="price-title" data-reveal data-i18n="home.priceTitle">Повні ТТХ і ціну надсилаємо за запитом.</h2>
+            <p data-reveal data-i18n="home.priceText">
+              Повні ТТХ і ціну надсилаємо за запитом. Залишіть контакт - передзвонимо або надішлемо специфікацію.
+            </p>
+          </div>
+          <div class="route-panel" data-reveal>
+            <div class="route-tabs" role="tablist" aria-label="Request type">
+              <button class="active" type="button" data-route="support" data-i18n="route.support">Підтримка</button>
+              <button type="button" data-route="procurement" data-i18n="route.procurement">Закупівля</button>
+              <button type="button" data-route="partnership" data-i18n="route.partnership">Партнерство</button>
+            </div>
+            <div class="route-result" aria-live="polite">
+              <span id="route-label">Підтримка</span>
+              <strong id="route-title">Наявні клієнти та експлуатація</strong>
+              <p id="route-copy">Питання по виробах, ремонту, налаштуванню, документації або польовому використанню.</p>
+              <a id="route-link" href="mailto:info@p-u-f.com">info@p-u-f.com</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="contact">
+        <div class="footer-card">
+          <div class="footer-top">
+            <div class="footer-intro">
+              <p data-i18n="footer.tagline">Розробляємо й виробляємо дрони під реальні задачі. Кожна наступна версія краща за попередню завдяки вам.</p>
+              <a class="footer-cta" href="#price" data-i18n="footer.talkCta">Залишити заявку</a>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+              <a href="about.html" data-i18n="nav.trust">Чому ПУФ</a>
+              <a href="about.html#vacancies" data-i18n="nav.about">Вакансії</a>
+              <a href="#contact" data-i18n="nav.contact">Контакти</a>
+            </nav>
+          </div>
+          <div class="footer-logo-band">
+            <svg class="footer-logo-mark" viewBox="0 0 638 148" fill="none" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+              <path d="M194.28 1.62695V84.709H20.7041V145.461H1.62793V65.6328H175.204V20.7031H1.62793V1.62695H194.28Z" fill="white" stroke="white" stroke-width="3.25456" />
+              <path d="M252.864 1.62695V126.385H397.601V1.62695H416.677V145.461H233.788V1.62695H252.864Z" fill="white" stroke="white" stroke-width="3.25456" />
+              <path d="M577.234 64.0059V83.082H472.004V145.461H452.928V64.0059H577.234Z" fill="white" stroke="white" stroke-width="3.25456" />
+              <path d="M635.815 1.62695V20.7012H452.928V1.62695H635.815Z" fill="#F9ED32" stroke="#F9ED32" stroke-width="3.25456" />
+            </svg>
+            <p class="footer-copyright">&reg; PUF 2026</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

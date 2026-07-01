@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "python3 -m http.server 5174 --bind 127.0.0.1"
+    "dev": "python3 -m http.server 5174 --bind 127.0.0.1",
+    "build:gate": "node scripts/build-gate.mjs"
   }
 }
 
