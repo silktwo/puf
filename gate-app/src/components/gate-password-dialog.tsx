@@ -4,7 +4,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -48,7 +47,7 @@ function GatePasswordDialog({ children }: { children: React.ReactNode }) {
       }}
     >
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="border-white/10 bg-black text-white sm:max-w-sm">
+      <DialogContent className="bg-black text-white ring-white/10 sm:max-w-sm">
         <DialogHeader>
           <DialogTitle className="font-light tracking-tight">
             Пароль доступу
@@ -77,15 +76,13 @@ function GatePasswordDialog({ children }: { children: React.ReactNode }) {
               {error}
             </p>
           ) : null}
-          <DialogFooter>
-            <button
-              type="submit"
-              disabled={checking}
-              className="w-full bg-[#f9ed32] py-2.5 text-sm font-medium text-black transition-colors hover:bg-[#fff685] disabled:opacity-60"
-            >
-              {checking ? "Перевірка…" : "Увійти"}
-            </button>
-          </DialogFooter>
+          <button
+            type="submit"
+            disabled={checking}
+            className="mt-1 w-full bg-[#f9ed32] py-2.5 text-sm font-medium text-black transition-colors hover:bg-[#fff685] disabled:opacity-60"
+          >
+            {checking ? "Перевірка…" : "Увійти"}
+          </button>
         </form>
       </DialogContent>
     </Dialog>
