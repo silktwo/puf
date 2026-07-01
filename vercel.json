@@ -2,6 +2,10 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/home",
+      "destination": "/home.html"
+    },
+    {
       "source": "/catalog",
       "destination": "/catalog.html"
     },
@@ -13,6 +17,15 @@
   "headers": [
     {
       "source": "/assets/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/gate-assets/:path*",
       "headers": [
         {
           "key": "Cache-Control",

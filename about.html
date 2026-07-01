@@ -10,24 +10,25 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-page="about">
     <div class="page-shell">
       <header class="site-header" data-reveal>
-        <a class="brand" href="index.html" aria-label="/PUF home"><span>/</span>PUF</a>
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
-          <a href="about.html" data-i18n="nav.trust">Чому ПУФ</a>
-          <a href="about.html#vacancies" data-i18n="nav.about">Вакансії</a>
-          <a href="#contact" data-i18n="nav.contact">Контакти</a>
+        <a class="brand-chip" href="home.html" aria-label="PUF home">
+          <img src="assets/puf-logo.svg" alt="PUF" />
+        </a>
+        <nav class="nav-bar" aria-label="Primary navigation">
+          <a class="nav-chip" href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+          <a class="nav-chip" href="about.html" data-i18n="nav.trust">Чому ПУФ</a>
+          <a class="nav-chip" href="about.html#vacancies" data-i18n="nav.about">Вакансії</a>
+          <a class="nav-chip" href="#contact" data-i18n="nav.contact">Контакти</a>
         </nav>
-        <div class="nav-actions" aria-label="Header actions">
-          <div class="lang-toggle" aria-label="Language">
-            <button type="button" data-lang="uk" aria-pressed="true">UA</button>
-            <button type="button" data-lang="en" aria-pressed="false">EN</button>
-          </div>
+        <a class="nav-cta" href="#contact" data-i18n="nav.cta">Зв'язатися</a>
+        <div class="lang-toggle" aria-label="Language">
+          <button type="button" data-lang="uk" aria-pressed="true">UA</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
       </header>
 
@@ -48,8 +49,7 @@
             <p data-i18n="about.whoText">Ми робимо дрони не в ізоляції від тих, хто ними воює. Найкращі рішення цієї війни народжуються там, де техніку застосовують щодня. Ми чуємо фідбек, доводимо ці рішення до серійної якості й залишаємо авторство за тими, хто це запропонував. Ми не вдаємо, що знаємо краще за військових. Ми працюємо разом із ними.</p>
           </article>
           <article data-reveal>
-            <h2 data-i18n="about.qualityTitle">Підхід
-і якість</h2>
+            <h2 data-i18n="about.qualityTitle">Підхід</h2>
             <p data-i18n="about.qualityText">Якість для нас не обіцянка «ідеально з першого разу», а швидкість, з якою ми виправляємо те, що показала реальність. Фідбек із застосування доходить до інженерів, втілюється в наступній версії й іде в серію. Так виріб стає кращим від ітерації до ітерації, не на папері, а в полі.</p>
           </article>
         </section>
@@ -71,7 +71,7 @@
                 <h3 data-i18n="home.militaryTitle">Тим, хто застосовує</h3>
               </summary>
               <ul>
-                <li data-i18n="home.military1">Надійність у полі. Конструкція, розрахована на реальні умови, а не на лабораторні.</li>
+                <li data-i18n="home.military1">Надійність у бою. Конструкція, розрахована на реальні умови, а не лише польові випробування.</li>
                 <li data-i18n="home.military2">Ремонтопридатність. Відновлення там, де техніка вийшла з ладу, без повернення на завод.</li>
                 <li data-i18n="home.military3">Бойовий досвід застосування. Рішення підтверджені полем бою.</li>
               </ul>
@@ -112,21 +112,25 @@
       <footer class="site-footer" id="contact">
         <div class="footer-card">
           <div class="footer-top">
-            <div>
-              <span>/PUF</span>
-              <p data-i18n="footer.tagline">Безпілотні вироби, сенсорні модулі, лінії зв'язку та польова підтримка.</p>
+            <div class="footer-intro">
+              <p data-i18n="footer.tagline">Розробляємо й виробляємо дрони під реальні задачі. Кожна наступна версія краща за попередню завдяки вам.</p>
+              <a class="footer-cta" href="#price" data-i18n="footer.talkCta">Залишити заявку</a>
             </div>
-            <div>
-              <span data-i18n="footer.contactLabel">Контакти</span>
-              <p><a href="tel:+380956509426" data-i18n="contact.phone">Телефон: +380 95 650 94 26</a><br /><a href="mailto:info@p-u-f.com" data-i18n="contact.email">Пошта: info@p-u-f.com</a></p>
-            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+              <a href="about.html" data-i18n="nav.trust">Чому ПУФ</a>
+              <a href="about.html#vacancies" data-i18n="nav.about">Вакансії</a>
+              <a href="#contact" data-i18n="nav.contact">Контакти</a>
+            </nav>
           </div>
-          <a class="footer-logo" href="#top">/PUF</a>
-          <div class="footer-bottom">
-            <a href="about.html#vacancies" data-i18n="nav.about">Вакансії</a>
-            <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
-            <span data-i18n="footer.legal">Юридична інформація за запитом</span>
-            <span>© 2026, PUF</span>
+          <div class="footer-logo-band">
+            <svg class="footer-logo-mark" viewBox="0 0 638 148" fill="none" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+              <path d="M194.28 1.62695V84.709H20.7041V145.461H1.62793V65.6328H175.204V20.7031H1.62793V1.62695H194.28Z" fill="white" stroke="white" stroke-width="3.25456" />
+              <path d="M252.864 1.62695V126.385H397.601V1.62695H416.677V145.461H233.788V1.62695H252.864Z" fill="white" stroke="white" stroke-width="3.25456" />
+              <path d="M577.234 64.0059V83.082H472.004V145.461H452.928V64.0059H577.234Z" fill="white" stroke="white" stroke-width="3.25456" />
+              <path d="M635.815 1.62695V20.7012H452.928V1.62695H635.815Z" fill="#F9ED32" stroke="#F9ED32" stroke-width="3.25456" />
+            </svg>
+            <p class="footer-copyright">&reg; PUF 2026</p>
           </div>
         </div>
       </footer>

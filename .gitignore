@@ -3,6 +3,7 @@ node_modules/
 .vercel/
 .env
 .env.*
+gate-app/dist/
 
 # Internal/private source materials. Do not deploy public catalog PDFs.
 assets/Catalog/

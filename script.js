@@ -4,17 +4,21 @@ const translations = {
     "nav.trust": "Чому ПУФ",
     "nav.about": "Вакансії",
     "nav.contact": "Контакти",
+    "nav.cta": "Зв'язатися",
     "cta.catalog": "Каталог",
     "cta.price": "Отримати прайс",
     "cta.contact": "Залишити контакт",
-    "home.eyebrow": "/ виробництво безпілотних виробів",
-    "home.heroTitle": "PUF",
-    "home.heroText": "Розробляємо й виробляємо дрони під реальні задачі.\nКожна наступна версія краща за попередню завдяки вам.",
+    "cta.feedback": "Залишити фідбек",
+    "home.eyebrow": "ПУФ",
+    "home.heroTitle": "Дрони створені,\nразом з військовими",
+    "home.heroText": "Розробляємо й виробляємо дрони під реальні задачі.\nКожна наступна версія краща за попередню завдяки вам.\nДопоможіть нам зробити наступні вироби ще кращими.",
+    "home.cardLabel": "Оптоволоконна лінія",
+    "home.cardText": "Керування по оптоволокну для умов, де радіоканал глушать.",
     "home.trustKicker": "Чому ПУФ",
     "home.trustTitle": "Працюємо разом\nіз військовими.",
     "home.trustText": "Ми робимо дрони не в ізоляції від тих, хто ними воює.\nМи не вдаємо, що знаємо краще за військових. Ми працюємо разом із ними.",
     "home.militaryTitle": "Тим, хто застосовує",
-    "home.military1": "Надійність у полі. Конструкція, розрахована на реальні умови, а не на лабораторні.",
+    "home.military1": "Надійність у бою. Конструкція, розрахована на реальні умови, а не лише польові випробування.",
     "home.military2": "Ремонтопридатність. Відновлення там, де техніка вийшла з ладу, без повернення на завод.",
     "home.military3": "Бойовий досвід застосування. Рішення підтверджені полем бою.",
     "home.procTitle": "Тим, хто закуповує",
@@ -36,7 +40,7 @@ const translations = {
     "line.relay": "Носій ретранслятора",
     "catalog.eyebrow": "/ каталог",
     "catalog.title": "Каталог\nPUF.",
-    "catalog.text": "Тут можна обрати або зібрати виріб під себе. За типом або через конфігуратор.",
+    "catalog.text": "Тут можна обрати виріб під власні потреби.",
     "catalog.linesKicker": "За типом",
     "catalog.linesTitle": "За типом\nвиробу.",
     "catalog.linesText": "Повні ТТХ і ціну надсилаємо за запитом після короткого уточнення задачі.",
@@ -49,7 +53,7 @@ const translations = {
     "catalog.activeLine": "Активна лінія",
     "catalog.builderKicker": "Конфігуратор",
     "catalog.builderTitle": "Зберіть виріб\nпід власні задачі",
-    "catalog.builderNote": "Повні ТТХ і ціну надсилаємо за запитом. Залишіть контакт - передзвонимо або надішлемо специфікацію.",
+    "catalog.builderNote": "Повні ТТХ і ціну надсилаємо за запитом. Лишіть контакт – передзвонимо або надішлемо специфікацію.",
     "catalog.summaryLabel": "Попередній запит",
     "catalog.requestCatalog": "Отримати прайс",
     "builder.frame": "Рама",
@@ -79,8 +83,8 @@ const translations = {
     "about.text": "Ми робимо дрони не в ізоляції від тих, хто ними воює.\nМи не вдаємо, що знаємо краще за військових. Ми працюємо разом із ними.",
     "about.whoTitle": "Хто ми",
     "about.whoText": "Ми робимо дрони не в ізоляції від тих, хто ними воює. Найкращі рішення цієї війни народжуються там, де техніку застосовують щодня. Ми чуємо фідбек, доводимо ці рішення до серійної якості й залишаємо авторство за тими, хто це запропонував. Ми не вдаємо, що знаємо краще за військових. Ми працюємо разом із ними.",
-    "about.qualityTitle": "Підхід\nі якість",
-    "about.qualityText": "Якість для нас не обіцянка «ідеально з першого разу», а швидкість, з якою ми виправляємо те, що показала реальність. Фідбек із застосування доходить до інженерів, втілюється в наступній версії й іде в серію. Так виріб стає кращим від ітерації до ітерації, не на папері, а в полі.",
+    "about.qualityTitle": "Підхід",
+    "about.qualityText": "Якість для нас – не обіцянка «ідеально з першого разу», а швидкість, з якою ми виправляємо те, що показала реальність. Фідбек із застосування доходить до інженерів, втілюється в наступній версії й іде в серію. Так виріб стає кращим від ітерації до ітерації – не на папері, а в полі.",
     "about.audienceTitle": "Для застосування\nі закупівлі.",
     "about.audienceText": "Окремі вимоги для тих, хто працює з виробом у полі,\nі тих, хто проводить закупівлю.",
     "about.jobsTitle": "Стати частиною\nкоманди",
@@ -92,26 +96,29 @@ const translations = {
     "about.contactsTitle": "Контакти",
     "contact.phone": "Телефон: +380 95 650 94 26",
     "contact.email": "Пошта: info@p-u-f.com",
-    "footer.tagline": "Розробляємо й виробляємо дрони під реальні задачі.",
-    "footer.contactLabel": "Контакти",
-    "footer.legal": "Юридична інформація за запитом"
+    "footer.tagline": "Розробляємо й виробляємо дрони під реальні задачі. Кожна наступна версія краща за попередню завдяки вам.",
+    "footer.talkCta": "Залишити заявку"
   },
   en: {
     "nav.catalog": "Catalog",
     "nav.trust": "Why PUF",
     "nav.about": "Careers",
     "nav.contact": "Contacts",
+    "nav.cta": "Get in touch",
     "cta.catalog": "Catalog",
     "cta.price": "Request price",
     "cta.contact": "Leave contact",
-    "home.eyebrow": "/ unmanned systems production",
-    "home.heroTitle": "PUF",
-    "home.heroText": "We design and manufacture drones for real tasks. Every next version gets better because of those who use it.",
+    "cta.feedback": "Leave feedback",
+    "home.eyebrow": "PUF",
+    "home.heroTitle": "Drones built,\ntogether with the military",
+    "home.heroText": "We design and manufacture drones for real tasks.\nEvery next version is better than the last — thanks to you.\nHelp us make the next products even better.",
+    "home.cardLabel": "Fiber control line",
+    "home.cardText": "Fiber control for conditions where radio channels are jammed.",
     "home.trustKicker": "Why PUF",
     "home.trustTitle": "We work with\nthose who use it.",
     "home.trustText": "We do not build drones in isolation from the people who use them. Field feedback reaches engineering, becomes the next version, and moves into production.",
     "home.militaryTitle": "For operators",
-    "home.military1": "Reliability in the field. Built for real conditions, not laboratory assumptions.",
+    "home.military1": "Reliability in combat. Built for real conditions, not just field trials.",
     "home.military2": "Serviceability. Restoration where equipment fails, without returning everything to the factory.",
     "home.military3": "Combat use experience. Decisions confirmed by the field.",
     "home.procTitle": "For procurement",
@@ -133,7 +140,7 @@ const translations = {
     "line.relay": "Relay carrier",
     "catalog.eyebrow": "/ catalog",
     "catalog.title": "PUF\ncatalog.",
-    "catalog.text": "Choose an existing type or assemble a product around your task. By type or through the configurator.",
+    "catalog.text": "Choose a product for your own needs.",
     "catalog.linesKicker": "By type",
     "catalog.linesTitle": "By product\ntype.",
     "catalog.linesText": "Full specs and price are shared by request after a short task check.",
@@ -146,7 +153,7 @@ const translations = {
     "catalog.activeLine": "Active line",
     "catalog.builderKicker": "Configurator",
     "catalog.builderTitle": "Build a product\nfor your task",
-    "catalog.builderNote": "Full specs and price are shared by request. Leave a contact, we will call back or send a specification.",
+    "catalog.builderNote": "Full specs and price are shared by request. Leave a contact — we will call back or send a specification.",
     "catalog.summaryLabel": "Initial request",
     "catalog.requestCatalog": "Request price",
     "builder.frame": "Frame",
@@ -176,7 +183,7 @@ const translations = {
     "about.text": "We do not pretend to know better than soldiers. We hear feedback, bring solutions to serial quality, and keep authorship with those who proposed them.",
     "about.whoTitle": "Who we are",
     "about.whoText": "We do not build drones in isolation from the people who use them. The best solutions of this war are born where equipment is used every day. We hear feedback, bring those solutions to serial quality, and keep authorship with those who proposed them.",
-    "about.qualityTitle": "Approach\nand quality",
+    "about.qualityTitle": "Approach",
     "about.qualityText": "Quality is not a promise to be perfect on the first try. It is the speed at which we correct what reality shows. Field feedback reaches engineers, becomes the next version, and moves into production. That is how the product improves from iteration to iteration, in the field rather than on paper.",
     "about.audienceTitle": "For operators\nand procurement.",
     "about.audienceText": "Separate requirements for those who use the product in the field and those who run procurement.",
@@ -189,9 +196,8 @@ const translations = {
     "about.contactsTitle": "Contacts",
     "contact.phone": "Phone: +380 95 650 94 26",
     "contact.email": "Email: info@p-u-f.com",
-    "footer.tagline": "We design and manufacture drones for real tasks.",
-    "footer.contactLabel": "Contacts",
-    "footer.legal": "Legal information by request"
+    "footer.tagline": "We design and manufacture drones for real tasks. Every next version is better than the last, thanks to you.",
+    "footer.talkCta": "Leave a request"
   }
 };
 
@@ -246,20 +252,58 @@ const routeData = {
 
 const lineData = {
   uk: {
-    optic: ["Оптика", "Керування по оптоволокну для умов, де радіоканал глушать. Стійкий, непомітний зв'язок там, де РЕБ робить інше марним."],
-    analog: ["Аналог", "Простий і перевірений канал. Коли потрібна передбачуваність без зайвого."],
-    digital: ["Цифра", "Якісніша картинка й ширші можливості там, де електромагнітна обстановка це дозволяє."],
-    thermal: ["Термал", "Робота в темряві, диму й складній погоді. Сенсори під різні задачі та бюджети."],
-    interceptor: ["Перехоплювачі", "Ураження повітряних цілей."],
-    relay: ["Носій ретранслятора", "Подовжує зону там, де зв'язок не дотягується."]
+    optic: {
+      title: "Оптика",
+      copy: "Керування по оптоволокну для умов, де радіоканал глушать. Стійкий, непомітний зв'язок там, де РЕБ робить інше марним.",
+      specs: ["Камера: денна / сутінкова / термальна", "Рама: 10″ / 13″ / 15″", "Котушка: довжина оптоволокна"]
+    },
+    analog: {
+      title: "Аналог",
+      copy: "Простий і перевірений канал. Коли потрібна передбачуваність без зайвого.",
+      specs: ["Камера: аналогова / термальна", "Рама: 10″ / 13″ / 15″"]
+    },
+    digital: {
+      title: "Цифра",
+      copy: "Якісніша картинка й ширші можливості там, де електромагнітна обстановка це дозволяє.",
+      specs: ["Камера: денна / сутінкова / термальна", "Рама: 10″ / 13″ / 15″"]
+    },
+    interceptor: {
+      title: "Перехоплювачі",
+      copy: "Ураження повітряних цілей.",
+      specs: ["Камера: аналогова / термальна"]
+    },
+    relay: {
+      title: "Носій ретранслятора",
+      copy: "Подовжує зону там, де зв'язок не дотягується.",
+      specs: ["Камера: одна / дві"]
+    }
   },
   en: {
-    optic: ["Fiber", "Fiber control for conditions where radio channels are jammed. A stable, low-signature link where EW makes other options useless."],
-    analog: ["Analog", "A simple and proven channel for cases where predictability matters without extra complexity."],
-    digital: ["Digital", "Better image and broader capabilities where the electromagnetic environment allows it."],
-    thermal: ["Thermal", "Operation in darkness, smoke, and difficult weather. Sensors for different tasks and budgets."],
-    interceptor: ["Interceptors", "Engagement of aerial targets."],
-    relay: ["Relay carrier", "Extends the zone where the link does not reach."]
+    optic: {
+      title: "Fiber",
+      copy: "Fiber control for conditions where radio channels are jammed. A stable, low-signature link where EW makes other options useless.",
+      specs: ["Camera: day / low-light / thermal", "Frame: 10″ / 13″ / 15″", "Spool: fiber length"]
+    },
+    analog: {
+      title: "Analog",
+      copy: "A simple and proven channel for cases where predictability matters without extra complexity.",
+      specs: ["Camera: analog / thermal", "Frame: 10″ / 13″ / 15″"]
+    },
+    digital: {
+      title: "Digital",
+      copy: "Better image and broader capabilities where the electromagnetic environment allows it.",
+      specs: ["Camera: day / low-light / thermal", "Frame: 10″ / 13″ / 15″"]
+    },
+    interceptor: {
+      title: "Interceptors",
+      copy: "Engagement of aerial targets.",
+      specs: ["Camera: analog / thermal"]
+    },
+    relay: {
+      title: "Relay carrier",
+      copy: "Extends the zone where the link does not reach.",
+      specs: ["Camera: one / two"]
+    }
   }
 };
 
@@ -345,9 +389,25 @@ function updateLine(line) {
   const activeLine = lineData[currentLang]?.[line] || lineData.uk.optic;
   const title = document.querySelector("#line-title");
   const copy = document.querySelector("#line-copy");
+  const specs = document.querySelector("#line-specs");
 
-  if (title) title.textContent = activeLine[0];
-  if (copy) copy.textContent = activeLine[1];
+  if (title) title.textContent = activeLine.title;
+  if (copy) copy.textContent = activeLine.copy;
+  if (specs) {
+    specs.innerHTML = "";
+    (activeLine.specs || []).forEach((item) => {
+      const li = document.createElement("li");
+      const [label, value] = item.split(/:\s(.+)/);
+      if (value) {
+        const strong = document.createElement("strong");
+        strong.textContent = `${label}:`;
+        li.append(strong, ` ${value}`);
+      } else {
+        li.textContent = item;
+      }
+      specs.appendChild(li);
+    });
+  }
 
   updateBuilderSummary();
 }
@@ -369,7 +429,7 @@ function updateBuilderSummary() {
   const summary = document.querySelector("#builder-summary");
   if (!summary) return;
 
-  const line = lineData[currentLang]?.[currentLine]?.[0] || lineData.uk.optic[0];
+  const line = lineData[currentLang]?.[currentLine]?.title || lineData.uk.optic.title;
   const activeOptions = Array.from(document.querySelectorAll(".option-row button.active")).map((button) => button.textContent.trim());
   summary.textContent = [line, ...activeOptions].join(" · ");
 }
@@ -377,7 +437,9 @@ function updateBuilderSummary() {
 function scrambleHeadlines() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  const alphabet = "abcdefghijklmnopqrstuvwxyz···---__";
+  const alphabet = currentLang === "uk"
+    ? "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя····----__"
+    : "abcdefghijklmnopqrstuvwxyz····----__";
 
   document.querySelectorAll("[data-scramble]").forEach((node) => {
     const finalText = node.textContent;
